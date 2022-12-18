@@ -15,6 +15,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    /* border-bottom: 2px solid #151417; */
 }
 
 .nav,
@@ -30,14 +31,6 @@ header {
     gap: 10px;
 }
 
-nav>ul:first-child{
-    width: 100%;
-    max-width: 500px;
-}
-
-#logo{
-    float: left;
-}
 
 nav img {
     width: 100px;
@@ -71,6 +64,23 @@ nav a {
     text-align: center;
     padding-bottom: 20px;
     margin-top: 0;
+}
+
+a[title="login"]{
+    background-color: #2572E7;
+    border: 2px solid #2572E7;
+    padding: 10px;
+    border-radius: 8px;
+    color: #ffffff;
+    display: inline-block;
+}
+
+a[title="sign up"]{
+    border: 2px solid #6DB723;
+    padding: 10px;
+    border-radius: 8px;
+    color: #6DB723;
+    display: inline-block;
 }
 
 footer {
@@ -120,22 +130,21 @@ footer>ul>li::first-line {
     box-shadow: 4px 4px 4px rgba(37, 114, 231, 0.25);
     padding: 10px;
     border: 1px solid rgba(37, 114, 231, 0.25);
-    /* max-height: 200px; */
 }
 
 .sect-1 .container>div img {
-    height: 60px;
-    margin: 30px;
+    height: 40px;
+    margin: 0 30px;
 }
 
 .sect-1 .container>div p:nth-of-type(1) {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .sect-1 .container>div p:nth-of-type(2) {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .sect-1 h2 {
