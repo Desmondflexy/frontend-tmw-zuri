@@ -13,29 +13,41 @@ header {
     padding: 0 10px;
     background-color: #ffffff;
     position: sticky;
-    top: -10px;z-index: 1;
+    top: 0;
+    z-index: 1;
 }
 
-nav, nav>*{
+.nav,
+.nav>* {
     padding: 0px;
 }
 
-nav,
-nav>ul {
+.nav,
+.nav>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
+nav>ul:first-child{
+    width: 100%;
+    max-width: 500px;
+}
+
+#logo{
+    float: left;
+}
+
 nav img {
     width: 100px;
 }
 
-nav img[alt="menu"] {
+#nav-btn {
     width: 24px;
     height: 24px;
     background-color: #FFF;
+    cursor: pointer;
 }
 
 nav button {
@@ -48,9 +60,17 @@ nav li {
     font-weight: 700;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: #113872;
+}
+
+.menu-block{
+    display: none;
+    padding: 0;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: 0;
 }
 
 footer {
@@ -60,13 +80,13 @@ footer {
     font-size: .95em;
 }
 
-footer ul{
+footer ul {
     list-style-type: none;
     padding-left: 0;
     margin: 20px 0;
 }
 
-footer>ul>li::first-line{
+footer>ul>li::first-line {
     font-weight: 700;
 }
 
@@ -302,16 +322,16 @@ footer>ul>li::first-line{
     font-size: 20px;
 }
 
-.sect-4>div:nth-of-type(2)>div:nth-of-type(2){
+.sect-4>div:nth-of-type(2)>div:nth-of-type(2) {
     margin-top: 50px;
 }
 
-.sect-5{
+.sect-5 {
     margin-bottom: 100px;
     text-align: center;
 }
 
-.sect-5>div>div{
+.sect-5>div>div {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -320,43 +340,44 @@ footer>ul>li::first-line{
     margin: 50px 0;
 }
 
-.sect-5>div>div>div{
+.sect-5>div>div>div {
     width: 80%;
 }
 
-.sect-5>div>div>div:nth-of-type(1) img{
+.sect-5>div>div>div:nth-of-type(1) img {
     width: 100%;
     height: 100%;
     min-height: 300px;
     max-width: 700px;
 }
 
-.flex0{
+.flex0 {
     text-align: center;
 }
 
-.sect-5>div>p, .sect-5>div>form{
+.sect-5>div>p,
+.sect-5>div>form {
     text-align: center;
 }
 
-.sect-5>div>p{
+.sect-5>div>p {
     color: #151417;
 }
 
-.sect-5>div>form{
+.sect-5>div>form {
     width: 80%;
     max-width: 500px;
     margin: 0 auto;
 }
 
-.sect-5>div>form>input{
+.sect-5>div>form>input {
     border: 1px solid #2572E7;
     padding: 10px;
     border-radius: 5px;
     width: 60%;
 }
 
-.sect-5>div>form>button{
+.sect-5>div>form>button {
     border: 1px solid #113872;
     padding: 10px;
     border-radius: 5px;
@@ -365,24 +386,24 @@ footer>ul>li::first-line{
     width: 30%;
 }
 
-.sect-5>div>form>button:hover{
+.sect-5>div>form>button:hover {
     border: 1px solid #113872ce;
     background-color: #113872ce;
 }
 
-.sect-5>div>div>div:nth-of-type(2) h2{
+.sect-5>div>div>div:nth-of-type(2) h2 {
     text-align: center;
     font-weight: 400;
     font-size: 20px;
 }
 
-.sect-5>div>div>div:nth-of-type(2) p:nth-of-type(1){
+.sect-5>div>div>div:nth-of-type(2) p:nth-of-type(1) {
     font-weight: 700;
     font-size: 40px;
     color: #19181B;
 }
 
-.sect-5>div>div>div:nth-of-type(2) p:nth-of-type(2){
+.sect-5>div>div>div:nth-of-type(2) p:nth-of-type(2) {
     font-size: 20px;
 }
 
@@ -392,7 +413,7 @@ footer>ul>li::first-line{
     justify-content: space-between;
 }
 
-.social{
+.social {
     display: flex;
     width: 90%;
     max-width: 500px;
@@ -401,29 +422,30 @@ footer>ul>li::first-line{
     gap: 20px;
 }
 
-.social img{
+.social img {
     height: 25px;
     width: 25px;
 }
 
-.social select{
+.social select {
     height: 25px;
     width: 100px;
     border-radius: 8px;
 }
 
-.social>div{
+.social>div {
     display: flex;
 }
-.social>div>a{
+
+.social>div>a {
     display: block;
 }
 
-footer p{
+footer p {
     text-align: center;
 }
 
-button:active{
+button:active {
     box-shadow: 1px 1px 5px darkslategrey;
 }
 
@@ -435,6 +457,10 @@ button:active{
     }
 
     .y-hidden {
+        display: none;
+    }
+
+    .menu-block{
         display: none;
     }
 
@@ -468,19 +494,22 @@ button:active{
         margin: 30px;
         width: 50%;
     }
+
     .sect-4 {
         flex-direction: row;
         padding: 60px;
         gap: 50px;
         text-align: unset;
     }
-    .sect-5>div>div{
+
+    .sect-5>div>div {
         flex-direction: row;
     }
-    
-    .sect-5>div>div>div{
+
+    .sect-5>div>div>div {
         width: 45%;
     }
+
     #footer-items {
         flex-direction: row;
     }
